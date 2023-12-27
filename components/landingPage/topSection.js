@@ -1,7 +1,12 @@
 import Image from "next/image";
 import React from "react";
+import { FaPlay } from "react-icons/fa";
+import { BiSolidBadgeCheck } from "react-icons/bi";
+import { FaEnvelope, FaCheckCircle } from "react-icons/fa";
+
 import NewStudentImg from "./newStudentImg";
 import DotSvg from "./dotSvg";
+import styles from "./styles.module.css";
 
 function TopSection() {
   return (
@@ -31,7 +36,7 @@ function TopSection() {
                   <svg
                     width="300px"
                     height="62.1px"
-                    enable-background="new 0 0 366 62.1"
+                    enableBackground="new 0 0 366 62.1"
                     viewBox="0 0 366 62.1"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -51,15 +56,15 @@ function TopSection() {
 
             <ul className="list-inline position-relative justify-content-center justify-content-lg-start mb-4">
               <li className="list-inline-item me-2">
-                <i className="bi bi-patch-check-fill h6 me-1"></i>Learn with
-                experts
+                <BiSolidBadgeCheck className="h5 me-1" />
+                Learn with experts
               </li>
               <li className="list-inline-item me-2">
-                <i className="bi bi-patch-check-fill h6 me-1"></i>Get
-                certificate
+                <BiSolidBadgeCheck className="h5 me-1" />
+                Get certificate
               </li>
               <li className="list-inline-item">
-                <i className="bi bi-patch-check-fill h6 me-1"></i>Get membership
+                <BiSolidBadgeCheck className="h5 me-1" /> Get membership
               </li>
             </ul>
 
@@ -75,9 +80,9 @@ function TopSection() {
                   data-glightbox
                   data-gallery="office-tour"
                   href="#"
-                  className="btn btn-round btn-primary-shadow mb-0 overflow-visible me-7"
+                  className={`btn btn-round btn-primary-shadow mb-0 overflow-visible me-7 ${styles.roundButtonCust}`}
                 >
-                  <i className="fas fa-play"></i>
+                  <FaPlay />
                   <h6 className="mb-0 ms-3 fw-normal position-absolute start-100 top-50 translate-middle-y">
                     Watch video
                   </h6>
@@ -88,18 +93,18 @@ function TopSection() {
 
           <div className="col-lg-7 col-xl-6 text-center position-relative">
             <figure className="position-absolute bottom-0 start-50 translate-middle-x mt-4 mb-0">
-              {/* <svg
-            width="550px"
-            height="538px"
-            viewBox="0 0 554 544"
-            style="enable-background: new 0 0 554 544"
-            xml:space="preserve"
-          >
-            <path
-              className="fill-primary"
-              d="M423.3,77.2c49.5,32.5,100.4,67.2,118.4,114.5s3.5,107.1-15.4,165.7c-18.7,58.6-41.8,116.1-84,148.6 c-42.5,32.8-104.2,40.2-163.8,37.3c-59.5-3.2-116.8-17.1-164.7-47.9c-48.3-30.6-87.2-78.2-102-131.6C-3,310.5,6.6,251,25.3,194.7 C43.6,138,70.7,84.3,114.1,49.5C157.2,14.8,216.7-1,270.8,6.4C324.8,14.2,373.4,44.7,423.3,77.2z"
-            />
-          </svg> */}
+              <svg
+                width="550px"
+                height="538px"
+                viewBox="0 0 554 544"
+                style={{ enableBackground: "new 0 0 554 544" }}
+                xmlSpace="preserve"
+              >
+                <path
+                  className="fill-primary"
+                  d="M423.3,77.2c49.5,32.5,100.4,67.2,118.4,114.5s3.5,107.1-15.4,165.7c-18.7,58.6-41.8,116.1-84,148.6 c-42.5,32.8-104.2,40.2-163.8,37.3c-59.5-3.2-116.8-17.1-164.7-47.9c-48.3-30.6-87.2-78.2-102-131.6C-3,310.5,6.6,251,25.3,194.7 C43.6,138,70.7,84.3,114.1,49.5C157.2,14.8,216.7-1,270.8,6.4C324.8,14.2,373.4,44.7,423.3,77.2z"
+                />
+              </svg>
             </figure>
 
             <figure className="position-absolute bottom-0 start-50 translate-middle-x mb-n5 z-index-9">
@@ -131,26 +136,41 @@ function TopSection() {
             </figure>
 
             <div className="p-2 bg-white shadow rounded-3 position-absolute top-50 start-0 translate-middle-y mt-n7 d-none d-sm-block">
-              <img src="assets/images/client/science.svg" alt="Icon" />
+              <Image
+                src="assets/images/client/science.svg"
+                alt="Icon"
+                height={100}
+                width={100}
+              />
             </div>
             <div className="p-2 bg-white shadow rounded-3 position-absolute top-0 end-0 me-5">
-              <img src="assets/images/client/angular.svg" alt="Icon" />
+              <Image
+                src="assets/images/client/angular.svg"
+                alt="Icon"
+                height={100}
+                width={100}
+              />
             </div>
             <div className="p-2 bg-white shadow rounded-3 position-absolute top-50 end-0 translate-middle-y mt-5 ms-5 d-none d-lg-block z-index-9">
-              <img src="assets/images/client/figma.svg" alt="Icon" />
+              <img
+                src="assets/images/client/figma.svg"
+                alt="Icon"
+                height={100}
+                width={100}
+              />
             </div>
 
             <div className="p-3 bg-blur border border-light shadow rounded-4 position-absolute bottom-0 start-0 z-index-9 d-none d-xl-block mb-5 ms-5">
               <div className="d-flex justify-content-between align-items-center">
                 <span className="icon-lg bg-warning rounded-circle">
-                  <i className="fas fa-envelope text-white"></i>
+                  <FaEnvelope className="text-white" />
                 </span>
 
                 <div className="text-start ms-3">
                   <h6 className="mb-0 text-white">
                     Congratulations
                     <span className="ms-4">
-                      <i className="fas fa-check-circle text-success"></i>
+                      <FaCheckCircle className="text-success" />
                     </span>
                   </h6>
                   <p className="mb-0 small text-white">
@@ -171,7 +191,7 @@ function TopSection() {
               <p className="text-white">Our daily new students</p>
 
               <ul className="avatar-group mb-0">
-                <li className="avatar avatar-sm">
+                {/* <li className="avatar avatar-sm">
                   <NewStudentImg avatar="01" />
                 </li>
                 <li className="avatar avatar-sm">
@@ -182,13 +202,13 @@ function TopSection() {
                 </li>
                 <li className="avatar avatar-sm">
                   <NewStudentImg avatar="04" />
-                </li>
+                </li> */}
 
-                {/* {["01", "02", "03", "04"].map((name, index) => (
+                {["01", "02", "03", "04"].map((name, index) => (
                   <li className="avatar avatar-sm" key={`${name}-${index}`}>
                     <NewStudentImg avatar={name} />
                   </li>
-                ))} */}
+                ))}
 
                 <li className="avatar avatar-sm">
                   <div className="avatar-img rounded-circle border-white bg-primary">
